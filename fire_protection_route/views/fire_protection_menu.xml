@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_fire_protection_route"
+              name="Ruttplanering"
+              parent="fire_protection_base.menu_fire_protection_root"
+              action="action_fire_route_plan"
+              sequence="25"/>
+</odoo>

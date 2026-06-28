@@ -6,11 +6,17 @@
     'version': '18.0.1.0.0',
     'summary': 'Optimerad ruttplanering för brandtekniker baserat på geografisk position och SLA',
     'category': 'Fire Protection',
-    'depends': ['fire_protection_base', 'fieldservice'],
+    'depends': ['fire_protection_base', 'fieldservice', 'web_map_ce'],
     'data': [
         'security/ir.model.access.csv',
         'views/fire_protection_route_views.xml',
+        'views/fire_protection_menu.xml',
     ],
+    'assets': {
+        'web.assets_backend': [
+            'fire_protection_route/static/src/**/*',
+        ],
+    },
     'application': False,
     'installable': True,
 }

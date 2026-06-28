@@ -1,22 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="view_fire_route_plan_tree" model="ir.ui.view">
-        <field name="name">fire.protection.route.plan.tree</field>
+    <!-- Map View for route planning -->
+    <record id="view_fsm_order_map_route" model="ir.ui.view">
+        <field name="name">fsm.order.map.route</field>
         <field name="model">fsm.order</field>
         <field name="arch" type="xml">
-            <list>
+            <map res_partner="partner_id"
+                 routing="true"
+                 panel_title="Dagens rutt"
+                 default_order="routing_sequence"
+                 limit="120"
+                 hide_name="false"
+                 hide_address="false">
+                <field name="name" string="Order"/>
+                <field name="routing_sequence" string="Stop"/>
+                <field name="estimated_arrival" string="ETA"/>
+                <field name="travel_time_minutes" string="Travel"/>
+                <field name="stage_id" string="Status"/>
+            </map>
+        </field>
+    </record>
+
+    <!-- Tree view -->
+    <record id="view_fsm_order_tree_route" model="ir.ui.view">
+        <field name="name">fsm.order.tree.route</field>
+        <field name="model">fsm.order</field>
+        <field name="arch" type="xml">
+            <list default_order="routing_sequence">
+                <field name="routing_sequence"/>
                 <field name="name"/>
                 <field name="location_id"/>
+                <field name="partner_id" invisible="1"/>
                 <field name="scheduled_date_start"/>
+                <field name="estimated_arrival"/>
+                <field name="travel_time_minutes"/>
                 <field name="person_id"/>
                 <field name="stage_id"/>
             </list>
         </field>
     </record>
+
+    <!-- Search view with today filter -->
+    <record id="view_fsm_order_search_route" model="ir.ui.view">
+        <field name="name">fsm.order.search.route</field>
+        <field name="model">fsm.order</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="location_id"/>
+                <field name="person_id"/>
+                <filter name="today" string="Today" domain="[('scheduled_date_start','&gt;=', context_today().strftime('%Y-%m-%d')), ('scheduled_date_start','&lt;', (context_today() + datetime.timedelta(days=1)).strftime('%Y-%m-%d'))]"/>
+                <filter name="unsequenced" string="Unsequenced" domain="[('routing_sequence', '=', 0)]"/>
+                <filter name="sequenced" string="Sequenced" domain="[('routing_sequence', '&gt;', 0)]"/>
+                <separator/>
+                <filter name="group_person" string="Group by Technician" domain="[]" context="{'group_by': 'person_id'}"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
     <record id="action_fire_route_plan" model="ir.actions.act_window">
         <field name="name">Ruttplanering</field>
         <field name="res_model">fsm.order</field>
         <field name="view_mode">map,list,form</field>
+        <field name="search_view_id" ref="view_fsm_order_search_route"/>
         <field name="context">{'search_default_today': 1}</field>
     </record>
 </odoo>

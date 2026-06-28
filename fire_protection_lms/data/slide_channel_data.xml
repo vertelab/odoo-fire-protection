@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- Kurs 1: SBA Grundkurs -->
+    <record id="slide_channel_sba" model="slide.channel">
+        <field name="name">SBA — Systematiskt Brandskyddsarbete (Grundkurs)</field>
+        <field name="description"><![CDATA[
+            <h3>Grundläggande utbildning i Systematiskt Brandskyddsarbete</h3>
+            <p>Denna kurs ger dig kunskaper om:</p>
+            <ul>
+                <li>Lagen om skydd mot olyckor (LSO) — dina skyldigheter</li>
+                <li>Brandskyddspolicy och brandskyddsorganisation</li>
+                <li>Riskidentifiering och riskvärdering</li>
+                <li>Egenkontroll och ronderingsrutiner</li>
+                <li>Avvikelsehantering och åtgärder</li>
+                <li>Dokumentation och tillsynsredo</li>
+                <li>Utrymning och utrymningsplaner</li>
+            </ul>
+            <p>Målgrupp: Brandskyddsansvariga, fastighetsägare, arbetsledare.</p>
+            <p>Kursen avslutas med ett diagnostiskt prov.</p>
+        ]]></field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <!-- Kurs 2: Brandskyddskontroll -->
+    <record id="slide_channel_inspection" model="slide.channel">
+        <field name="name">Brandskyddskontroll — SBF 120:6</field>
+        <field name="description"><![CDATA[
+            <h3>Utbildning för brandskyddskontrollanter enligt SBF 120:6</h3>
+            <p>Denna kurs täcker:</p>
+            <ul>
+                <li>Regelverk SBF 120:6 — krav och omfattning</li>
+                <li>Kontrollmetodik för olika objekttyper</li>
+                <li>Brandsläckare — handbrandsläckare och brandposter</li>
+                <li>Brandlarm och utrymningslarm</li>
+                <li>Branddörrar och brandcellsgränser</li>
+                <li>Nödbelysning och utrymningsskyltar</li>
+                <li>Dokumentation och rapportering</li>
+            </ul>
+            <p>Målgrupp: Brandskyddskontrollanter, servicepersonal.</p>
+            <p>Kursen avslutas med ett diagnostiskt prov.</p>
+        ]]></field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <!-- Kurs 3: HLR -->
+    <record id="slide_channel_hlr" model="slide.channel">
+        <field name="name">HLR — Hjärt-lungräddning (Grundkurs)</field>
+        <field name="description"><![CDATA[
+            <h3>Grundläggande utbildning i HLR med inriktning mot brandskydd</h3>
+            <p>Denna kurs täcker:</p>
+            <ul>
+                <li>Larmrutiner vid hjärtstopp</li>
+                <li>Hjärt-lungräddning (HLR) — vuxen</li>
+                <li>Användning av hjärtstartare (AED)</li>
+                <li>HLR vid brand och rök — särskilda hänsyn</li>
+                <li>Första hjälpen vid brännskador</li>
+            </ul>
+            <p>Målgrupp: All personal, brandskyddsansvariga.</p>
+            <p>Kursen avslutas med ett diagnostiskt prov.</p>
+        ]]></field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <!-- Kurs 4: Heta Arbeten -->
+    <record id="slide_channel_hotwork" model="slide.channel">
+        <field name="name">Heta Arbeten — Säkerhetsutbildning</field>
+        <field name="description"><![CDATA[
+            <h3>Utbildning för den som utför eller beställer Heta Arbeten</h3>
+            <p>Denna kurs täcker:</p>
+            <ul>
+                <li>Regelverk och försäkringskrav för Heta Arbeten</li>
+                <li>Riskidentifiering inför heta arbeten</li>
+                <li>Brandvakt — roll, ansvar och utrustning</li>
+                <li>Släckutrustning och släckmetoder</li>
+                <li>Efterkontroll och bevakningstid</li>
+                <li>Dokumentation och tillstånd</li>
+            </ul>
+            <p>Målgrupp: Svetsare, takläggare, VVS-montörer, arbetsledare.</p>
+            <p>Kursen avslutas med ett diagnostiskt prov.</p>
+        ]]></field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+</odoo>

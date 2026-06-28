@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- ============================================ -->
+    <!-- SBA Grundkurs — Diagnostiskt prov             -->
+    <!-- ============================================ -->
+    <record id="quiz_slide_sba" model="slide.slide">
+        <field name="name">Diagnostiskt prov — SBA Grundkurs</field>
+        <field name="channel_id" ref="slide_channel_sba"/>
+        <field name="slide_category">quiz</field>
+        <field name="is_published" eval="True"/>
+        <field name="sequence">99</field>
+    </record>
+
+    <record id="quiz_sba_q1" model="slide.question">
+        <field name="slide_id" ref="quiz_slide_sba"/>
+        <field name="question">Vilken lag reglerar det systematiska brandskyddsarbetet i Sverige?</field>
+        <field name="sequence">1</field>
+    </record>
+    <record id="quiz_sba_q1_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_sba_q1"/>
+        <field name="text_value">Lagen om skydd mot olyckor (LSO)</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+    <record id="quiz_sba_q1_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_sba_q1"/>
+        <field name="text_value">Arbetsmiljölagen (AML)</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+    <record id="quiz_sba_q1_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_sba_q1"/>
+        <field name="text_value">Plan- och bygglagen (PBL)</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_sba_q2" model="slide.question">
+        <field name="slide_id" ref="quiz_slide_sba"/>
+        <field name="question">Hur ofta ska egenkontroll av brandskyddet utföras enligt SBA?</field>
+        <field name="sequence">2</field>
+    </record>
+    <record id="quiz_sba_q2_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_sba_q2"/>
+        <field name="text_value">Enligt fastställt kontrollschema — löpande under året</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+    <record id="quiz_sba_q2_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_sba_q2"/>
+        <field name="text_value">Endast vid årlig revision</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+    <record id="quiz_sba_q2_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_sba_q2"/>
+        <field name="text_value">En gång vart femte år</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_sba_q3" model="slide.question">
+        <field name="slide_id" ref="quiz_slide_sba"/>
+        <field name="question">Vad ska en brandskyddspolicy minst innehålla?</field>
+        <field name="sequence">3</field>
+    </record>
+    <record id="quiz_sba_q3_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_sba_q3"/>
+        <field name="text_value">Övergripande mål för brandskyddet och åtagande om ständig förbättring</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+    <record id="quiz_sba_q3_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_sba_q3"/>
+        <field name="text_value">Enbart en lista över brandsläckare</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_sba_q4" model="slide.question">
+        <field name="slide_id" ref="quiz_slide_sba"/>
+        <field name="question">Vad gör man om en brist upptäcks vid rondering?</field>
+        <field name="sequence">4</field>
+    </record>
+    <record id="quiz_sba_q4_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_sba_q4"/>
+        <field name="text_value">Dokumenterar bristen, skapar en åtgärdsorder med deadline och ansvarig</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+    <record id="quiz_sba_q4_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_sba_q4"/>
+        <field name="text_value">Ignorerar bristen om den är liten</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+    <record id="quiz_sba_q4_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_sba_q4"/>
+        <field name="text_value">Ringer Räddningstjänsten direkt</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_sba_q5" model="slide.question">
+        <field name="slide_id" ref="quiz_slide_sba"/>
+        <field name="question">Vem är skyldig att bedriva systematiskt brandskyddsarbete?</field>
+        <field name="sequence">5</field>
+    </record>
+    <record id="quiz_sba_q5_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_sba_q5"/>
+        <field name="text_value">Ägare eller nyttjanderättshavare till byggnad eller anläggning</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+    <record id="quiz_sba_q5_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_sba_q5"/>
+        <field name="text_value">Endast Räddningstjänsten</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+    <record id="quiz_sba_q5_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_sba_q5"/>
+        <field name="text_value">Endast fastighetsskötaren</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <!-- ============================================ -->
+    <!-- Brandskyddskontroll — Diagnostiskt prov       -->
+    <!-- ============================================ -->
+    <record id="quiz_slide_inspection" model="slide.slide">
+        <field name="name">Diagnostiskt prov — Brandskyddskontroll SBF 120:6</field>
+        <field name="channel_id" ref="slide_channel_inspection"/>
+        <field name="slide_category">quiz</field>
+        <field name="is_published" eval="True"/>
+        <field name="sequence">99</field>
+    </record>
+
+    <record id="quiz_insp_q1" model="slide.question">
+        <field name="slide_id" ref="quiz_slide_inspection"/>
+        <field name="question">Vilken standard reglerar brandskyddskontroll i Sverige?</field>
+        <field name="sequence">1</field>
+    </record>
+    <record id="quiz_insp_q1_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_insp_q1"/>
+        <field name="text_value">SBF 120:6</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+    <record id="quiz_insp_q1_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_insp_q1"/>
+        <field name="text_value">ISO 9001</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_insp_q2" model="slide.question">
+        <field name="slide_id" ref="quiz_slide_inspection"/>
+        <field name="question">Hur ofta ska en handbrandsläckare genomgå 5-årsöversyn?</field>
+        <field name="sequence">2</field>
+    </record>
+    <record id="quiz_insp_q2_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_insp_q2"/>
+        <field name="text_value">Vart 5:e år från tillverkningsdatum</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+    <record id="quiz_insp_q2_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_insp_q2"/>
+        <field name="text_value">Vart 10:e år</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_insp_q3" model="slide.question">
+        <field name="slide_id" ref="quiz_slide_inspection"/>
+        <field name="question">Vad kontrolleras på en branddörr vid rondering?</field>
+        <field name="sequence">3</field>
+    </record>
+    <record id="quiz_insp_q3_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_insp_q3"/>
+        <field name="text_value">Att dörren stänger automatiskt, tätningslister är hela, inga skador, ej uppställd med kil</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+    <record id="quiz_insp_q3_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_insp_q3"/>
+        <field name="text_value">Endast att dörren finns på plats</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <!-- ============================================ -->
+    <!-- HLR — Diagnostiskt prov                       -->
+    <!-- ============================================ -->
+    <record id="quiz_slide_hlr" model="slide.slide">
+        <field name="name">Diagnostiskt prov — HLR Grundkurs</field>
+        <field name="channel_id" ref="slide_channel_hlr"/>
+        <field name="slide_category">quiz</field>
+        <field name="is_published" eval="True"/>
+        <field name="sequence">99</field>
+    </record>
+
+    <record id="quiz_hlr_q1" model="slide.question">
+        <field name="slide_id" ref="quiz_slide_hlr"/>
+        <field name="question">Vilket är det första steget vid misstänkt hjärtstopp?</field>
+        <field name="sequence">1</field>
+    </record>
+    <record id="quiz_hlr_q1_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_hlr_q1"/>
+        <field name="text_value">Kontrollera medvetande och andning, larma 112</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+    <record id="quiz_hlr_q1_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_hlr_q1"/>
+        <field name="text_value">Påbörja HLR direkt utan att larma</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_hlr_q2" model="slide.question">
+        <field name="slide_id" ref="quiz_slide_hlr"/>
+        <field name="question">Vad är rekommenderad kompressionsfrekvens vid HLR på vuxen?</field>
+        <field name="sequence">2</field>
+    </record>
+    <record id="quiz_hlr_q2_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_hlr_q2"/>
+        <field name="text_value">100-120 kompressioner per minut</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+    <record id="quiz_hlr_q2_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_hlr_q2"/>
+        <field name="text_value">60-80 kompressioner per minut</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_hlr_q3" model="slide.question">
+        <field name="slide_id" ref="quiz_slide_hlr"/>
+        <field name="question">Hur påverkas HLR vid brand och rök?</field>
+        <field name="sequence">3</field>
+    </record>
+    <record id="quiz_hlr_q3_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_hlr_q3"/>
+        <field name="text_value">Förflytta patienten till säker plats om möjligt, var uppmärksam på rökutveckling</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+    <record id="quiz_hlr_q3_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_hlr_q3"/>
+        <field name="text_value">HLR utförs på samma sätt oavsett brand</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <!-- ============================================ -->
+    <!-- Heta Arbeten — Diagnostiskt prov              -->
+    <!-- ============================================ -->
+    <record id="quiz_slide_hotwork" model="slide.slide">
+        <field name="name">Diagnostiskt prov — Heta Arbeten</field>
+        <field name="channel_id" ref="slide_channel_hotwork"/>
+        <field name="slide_category">quiz</field>
+        <field name="is_published" eval="True"/>
+        <field name="sequence">99</field>
+    </record>
+
+    <record id="quiz_hw_q1" model="slide.question">
+        <field name="slide_id" ref="quiz_slide_hotwork"/>
+        <field name="question">Vad krävs innan Heta Arbeten får påbörjas?</field>
+        <field name="sequence">1</field>
+    </record>
+    <record id="quiz_hw_q1_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_hw_q1"/>
+        <field name="text_value">Godkänd tillståndsblankett, riskbedömning, släckutrustning framme, brandvakt utsedd</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+    <record id="quiz_hw_q1_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_hw_q1"/>
+        <field name="text_value">Endast att ha en brandsläckare i bilen</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_hw_q2" model="slide.question">
+        <field name="slide_id" ref="quiz_slide_hotwork"/>
+        <field name="question">Hur länge ska efterbevakning ske efter avslutade Heta Arbeten?</field>
+        <field name="sequence">2</field>
+    </record>
+    <record id="quiz_hw_q2_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_hw_q2"/>
+        <field name="text_value">Minst 2 timmar, eller enligt försäkringsbolagets krav</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+    <record id="quiz_hw_q2_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_hw_q2"/>
+        <field name="text_value">15 minuter räcker</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_hw_q3" model="slide.question">
+        <field name="slide_id" ref="quiz_slide_hotwork"/>
+        <field name="question">Vad är brandvaktens viktigaste uppgift?</field>
+        <field name="sequence">3</field>
+    </record>
+    <record id="quiz_hw_q3_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_hw_q3"/>
+        <field name="text_value">Övervaka arbetsplatsen för att upptäcka och släcka eventuell brand under och efter arbetet</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+    <record id="quiz_hw_q3_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_hw_q3"/>
+        <field name="text_value">Hämta kaffe till svetsaren</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+</odoo>

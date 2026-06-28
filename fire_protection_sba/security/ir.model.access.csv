@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_inspection_user,Inspection - User,model_fire_protection_inspection,fire_protection_base.group_fire_protection_user,1,0,0,0
+access_inspection_manager,Inspection - Manager,model_fire_protection_inspection,fire_protection_base.group_fire_protection_manager,1,1,1,1
+access_checklist_item_user,Checklist Item - User,model_fire_protection_checklist_item,fire_protection_base.group_fire_protection_user,1,1,1,0
+access_checklist_item_manager,Checklist Item - Manager,model_fire_protection_checklist_item,fire_protection_base.group_fire_protection_manager,1,1,1,1

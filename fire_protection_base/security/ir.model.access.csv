@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_fire_object_user,Object - User,model_fire_protection_object,group_fire_protection_user,1,0,0,0
+access_fire_object_manager,Object - Manager,model_fire_protection_object,group_fire_protection_manager,1,1,1,1

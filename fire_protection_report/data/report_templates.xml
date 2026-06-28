@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_export_tillsyn" model="ir.actions.server">
+        <field name="name">Exportera Tillsynsunderlag</field>
+        <field name="model_id" ref="fire_protection_sba.model_fire_protection_inspection"/>
+        <field name="state">code</field>
+        <field name="code">
+            action = model.action_generate_report()
+        </field>
+    </record>
+</odoo>

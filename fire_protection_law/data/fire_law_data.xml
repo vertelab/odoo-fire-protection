@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- Brandskyddslagstiftning via document_law / mgmtsystem_law -->
+    <record id="law_lso" model="document.law">
+        <field name="name">LSO — Lag (2003:778) om skydd mot olyckor</field>
+        <field name="code">LSO 2003:778</field>
+        <field name="description">Lagen reglerar skyldigheter för enskilda, kommuner och staten att vidta åtgärder för att förebygga bränder och andra olyckor. 2 kap 2§: Ägare eller nyttjanderättshavare ska i skälig omfattning hålla utrustning för släckning av brand och för livräddning vid brand.</field>
+        <field name="url">https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2003778-om-skydd-mot-olyckor_sfs-2003-778/</field>
+    </record>
+    <record id="law_lbe" model="document.law">
+        <field name="name">LBE — Lag (2010:1011) om brandfarliga och explosiva varor</field>
+        <field name="code">LBE 2010:1011</field>
+        <field name="description">Lagen syftar till att hindra, förebygga och begränsa olyckor och skador som orsakas av brandfarliga eller explosiva varor.</field>
+        <field name="url">https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20101011-om-brandfarliga-och-explosiva_sfs-2010-1011/</field>
+    </record>
+    <record id="law_afs_sam" model="document.law">
+        <field name="name">AFS 2023:1 — Systematiskt arbetsmiljöarbete</field>
+        <field name="code">AFS 2023:1</field>
+        <field name="description">Arbetsmiljöverkets föreskrift om systematiskt arbetsmiljöarbete, inklusive brandskyddsaspekter i arbetsmiljön.</field>
+        <field name="url">https://www.av.se/arbetsmiljoarbete-och-inspektioner/publikationer/foreskrifter/afs-2023-1/</field>
+    </record>
+    <record id="law_bbr" model="document.law">
+        <field name="name">BBR — Boverkets Byggregler (Brandkapitel)</field>
+        <field name="code">BBR 29</field>
+        <field name="description">Boverkets byggregler, avsnitt 5 — Brandskydd. Reglerar byggnadstekniskt brandskydd: brandcellsindelning, utrymningsvägar, brandlarm, brandskyddsklass.</field>
+        <field name="url">https://www.boverket.se/sv/byggande/regler-for-byggande/om-boverkets-byggregler-bbr/</field>
+    </record>
+    <record id="law_sbf_120_6" model="document.law">
+        <field name="name">SBF 120:6 — Regler för brandskyddskontroll</field>
+        <field name="code">SBF 120:6</field>
+        <field name="description">Svenska Brandskyddsföreningens regler för brandskyddskontroll. Specificerar kompetenskrav och kontrollmetodik.</field>
+    </record>
+    <record id="law_sbf_120_8" model="document.law">
+        <field name="name">SBF 120:8 — Regler för SBA</field>
+        <field name="code">SBF 120:8</field>
+        <field name="description">Svenska Brandskyddsföreningens regler för systematiskt brandskyddsarbete (SBA). Vägledning för hur LSO:s krav på SBA ska uppfyllas.</field>
+    </record>
+</odoo>

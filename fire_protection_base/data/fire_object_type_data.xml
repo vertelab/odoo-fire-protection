@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- Default object types for service intervals -->
+    <record id="object_type_extinguisher" model="fire.protection.object.type">
+        <field name="name">Brandsläckare</field>
+        <field name="code">extinguisher</field>
+        <field name="service_interval_months">12</field>
+        <field name="overhaul_years">5</field>
+        <field name="reload_years">10</field>
+        <field name="scrap_years">20</field>
+    </record>
+    <record id="object_type_alarm" model="fire.protection.object.type">
+        <field name="name">Brandlarm</field>
+        <field name="code">alarm</field>
+        <field name="service_interval_months">12</field>
+    </record>
+    <record id="object_type_door" model="fire.protection.object.type">
+        <field name="name">Branddörr</field>
+        <field name="code">door</field>
+        <field name="service_interval_months">3</field>
+    </record>
+    <record id="object_type_sprinkler" model="fire.protection.object.type">
+        <field name="name">Sprinkler</field>
+        <field name="code">sprinkler</field>
+        <field name="service_interval_months">12</field>
+    </record>
+    <record id="object_type_lighting" model="fire.protection.object.type">
+        <field name="name">Nödbelysning</field>
+        <field name="code">lighting</field>
+        <field name="service_interval_months">12</field>
+    </record>
+</odoo>

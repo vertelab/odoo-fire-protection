@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_fire_route_plan_tree" model="ir.ui.view">
+        <field name="name">fire.protection.route.plan.tree</field>
+        <field name="model">fsm.order</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="location_id"/>
+                <field name="scheduled_date_start"/>
+                <field name="person_id"/>
+                <field name="stage_id"/>
+            </list>
+        </field>
+    </record>
+    <record id="action_fire_route_plan" model="ir.actions.act_window">
+        <field name="name">Ruttplanering</field>
+        <field name="res_model">fsm.order</field>
+        <field name="view_mode">map,list,form</field>
+        <field name="context">{'search_default_today': 1}</field>
+    </record>
+</odoo>

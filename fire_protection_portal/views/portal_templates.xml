@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="portal_fire_protection_my" name="My Fire Protection">
+        <t t-call="portal.portal_layout">
+            <t t-set="title">Mitt Brandskydd</t>
+            <div class="container">
+                <t t-foreach="locations" t-as="location">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <h5><t t-esc="location.name"/></h5>
+                            <span class="badge" t-att-class="'badge bg-' + ('success' if location.fire_safety_rating == 'A' else 'warning' if location.fire_safety_rating in ('B', 'C') else 'danger')">
+                                <t t-esc="location.fire_safety_rating"/>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <p>Objekt: <t t-esc="len(location.fire_protection_object_ids)"/></p>
+                            <p>Brister: <t t-esc="location.fire_deficiencies_count"/></p>
+                            <p>Senaste kontroll: <t t-esc="location.fire_last_inspection_date"/></p>
+                            <a t-att-href="'/my/fire-protection/location/%s' % location.id" class="btn btn-primary">Visa detaljer</a>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </t>
+    </template>
+</odoo>

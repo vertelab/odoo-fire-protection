@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_fire_protection_inspection_tree" model="ir.ui.view">
+        <field name="name">fire.protection.inspection.tree</field>
+        <field name="model">fire.protection.inspection</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="date"/>
+                <field name="location_id"/>
+                <field name="inspection_type"/>
+                <field name="inspector_id"/>
+                <field name="deficiencies_found"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_fire_protection_inspection_form" model="ir.ui.view">
+        <field name="name">fire.protection.inspection.form</field>
+        <field name="model">fire.protection.inspection</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_start" string="Start Inspection" type="object" invisible="state != 'draft'" class="btn-primary"/>
+                    <button name="action_generate_checklist" string="Generate Checklist" type="object" invisible="state not in ('draft', 'in_progress')"/>
+                    <button name="action_complete" string="Complete" type="object" invisible="state != 'in_progress'" class="btn-primary"/>
+                    <button name="action_cancel" string="Cancel" type="object" invisible="state not in ('draft', 'in_progress')"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,in_progress,completed"/>
+                </header>
+                <sheet>
+                    <div class="oe_title"><h1><field name="name" placeholder="Inspection Name"/></h1></div>
+                    <group>
+                        <field name="date"/>
+                        <field name="inspection_type"/>
+                        <field name="location_id"/>
+                        <field name="inspector_id"/>
+                        <field name="deficiencies_found"/>
+                    </group>
+                    <group string="Checklist">
+                        <field name="checklist_ids" nolabel="1">
+                            <list editable="bottom">
+                                <field name="object_id"/>
+                                <field name="actual_status" widget="badge"/>
+                                <field name="is_deficient"/>
+                                <field name="comment"/>
+                            </list>
+                        </field>
+                    </group>
+                    <group string="Notes"><field name="notes" nolabel="1"/></group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_fire_protection_inspection" model="ir.actions.act_window">
+        <field name="name">SBA-ronderingar</field>
+        <field name="res_model">fire.protection.inspection</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

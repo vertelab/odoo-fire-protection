@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_fire_protection_checklist_item_form" model="ir.ui.view">
+        <field name="name">fire.protection.checklist.item.form</field>
+        <field name="model">fire.protection.checklist.item</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_mark_ok" string="OK" type="object" class="btn-success"/>
+                    <button name="action_mark_deficient" string="Deficient" type="object" class="btn-warning"/>
+                    <button name="action_mark_critical" string="Critical" type="object" class="btn-danger"/>
+                    <button name="action_mark_not_found" string="Not Found" type="object"/>
+                    <button name="action_create_deficiency" string="Create Deficiency" type="object" invisible="not is_deficient" class="btn-primary"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="object_id"/>
+                        <field name="expected_status"/>
+                        <field name="actual_status"/>
+                        <field name="is_deficient"/>
+                    </group>
+                    <group string="Photo"><field name="photo" widget="image"/></group>
+                    <group string="Comment"><field name="comment" nolabel="1"/></group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

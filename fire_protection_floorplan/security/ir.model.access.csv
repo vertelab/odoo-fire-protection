@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_floorplan_user,Floorplan - User,model_fire_protection_floorplan,fire_protection_base.group_fire_protection_user,1,0,0,0
+access_floorplan_manager,Floorplan - Manager,model_fire_protection_floorplan,fire_protection_base.group_fire_protection_manager,1,1,1,1
+access_hotspot_user,Hotspot - User,model_fire_protection_hotspot,fire_protection_base.group_fire_protection_user,1,0,0,0
+access_hotspot_manager,Hotspot - Manager,model_fire_protection_hotspot,fire_protection_base.group_fire_protection_manager,1,1,1,1

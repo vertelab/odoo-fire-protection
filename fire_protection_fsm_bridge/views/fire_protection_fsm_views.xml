@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_mgmtsystem_nonconformity_form_inherit_fire" model="ir.ui.view">
+        <field name="name">mgmtsystem.nonconformity.form.fire</field>
+        <field name="model">mgmtsystem.nonconformity</field>
+        <field name="inherit_id" ref="mgmtsystem_nonconformity.mgmtsystem_nonconformity_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group string="Brandskydd">
+                    <field name="fire_protection_object_id"/>
+                    <field name="fsm_order_id"/>
+                    <button name="action_create_fsm_order" string="Skapa FSM-arbetsorder" type="object" class="btn-primary" invisible="fsm_order_id"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_fsm_order_form_inherit_fire" model="ir.ui.view">
+        <field name="name">fsm.order.form.fire</field>
+        <field name="model">fsm.order</field>
+        <field name="inherit_id" ref="fieldservice.fsm_order_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group string="Brandskydd">
+                    <field name="fire_deficiency_id"/>
+                    <field name="fire_protection_object_id"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

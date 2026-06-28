@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_fire_iot_sensor_tree" model="ir.ui.view">
+        <field name="name">fire.protection.iot.sensor.tree</field>
+        <field name="model">fire.protection.object</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="object_type"/>
+                <field name="location_id"/>
+                <field name="status"/>
+            </list>
+        </field>
+    </record>
+    <record id="action_fire_iot_dashboard" model="ir.actions.act_window">
+        <field name="name">IoT Brandskydd</field>
+        <field name="res_model">fire.protection.object</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('object_type', 'in', ('alarm', 'sprinkler', 'gas'))]</field>
+    </record>
+</odoo>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_fire_protection_root"
+              name="Brandskydd"
+              sequence="55"
+              groups="group_fire_protection_user"/>
+
+    <menuitem id="menu_fire_protection_objects"
+              name="Objektregister"
+              parent="menu_fire_protection_root"
+              action="action_fire_protection_object"
+              sequence="10"/>
+
+    <menuitem id="menu_fire_protection_config"
+              name="Konfiguration"
+              parent="menu_fire_protection_root"
+              groups="group_fire_protection_manager"
+              sequence="90"/>
+</odoo>

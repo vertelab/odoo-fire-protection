@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_fsm_location_form_inherit_fire" model="ir.ui.view">
+        <field name="name">fsm.location.form.fire</field>
+        <field name="model">fsm.location</field>
+        <field name="inherit_id" ref="fieldservice.fsm_location_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group string="Brandskydd">
+                    <field name="fire_safety_rating"/>
+                    <field name="fire_responsible_person_id"/>
+                    <field name="fire_last_inspection_date"/>
+                    <field name="fire_next_inspection_date"/>
+                    <field name="fire_object_count"/>
+                    <field name="fire_deficiencies_count"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_fsm_location_tree_inherit_fire" model="ir.ui.view">
+        <field name="name">fsm.location.tree.fire</field>
+        <field name="model">fsm.location</field>
+        <field name="inherit_id" ref="fieldservice.fsm_location_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="fire_safety_rating"/>
+                <field name="fire_deficiencies_count"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

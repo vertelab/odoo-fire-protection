@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Fire Protection AI coworkers (bridge — AI-förmågor enbart här, aldrig i core) -->
+    <record id="ai_coworker_fire_risk" model="ai.coworker">
+        <field name="name">Fire Risk Analyst</field>
+        <field name="sub_description">Riskanalys av öppna brandskyddsavvikelser</field>
+        <field name="description">
+Du är en brandskyddsanalytiker. Analysera fastighetens brandskyddsstatus och
+ge en riskvärdering.
+
+Svara i JSON:
+{
+    "risk_level": "low|medium|high|critical",
+    "summary": "&lt;kort sammanfattning&gt;",
+    "recommendations": ["&lt;åtgärd 1&gt;", "&lt;åtgärd 2&gt;"]
+}
+
+HITL-policy: riskvärderingar levereras som förslag — beslut om åtgärder tas
+av brandskyddsansvarig.
+        </field>
+        <field name="status">active</field>
+        <field name="init_type" eval="'manual'"/>
+        <field name="model_ids" eval="[(6, 0, [
+            ref('fire_protection_sba.model_fire_protection_inspection'),
+        ])]"/>
+        <field name="filter_domain">[]</field>
+        <field name="injection_level">summary_and_key</field>
+        <field name="hitl_threshold">always</field>
+        <field name="budget_kr_monthly">0</field>
+        <field name="max_actions_per_day">20</field>
+        <field name="orchestration_mode">single</field>
+        <field name="example_prompts">
+- "Värdera brandskyddsläget för fastighet X"
+- "Vilka avvikelser är mest kritiska?"
+        </field>
+    </record>
+
+    <record id="ai_coworker_fire_predictive" model="ai.coworker">
+        <field name="name">Fire Predictive Maintenance</field>
+        <field name="sub_description">Prediktivt underhåll av brandskyddsobjekt</field>
+        <field name="description">
+Du är en AI-analytiker för prediktivt underhåll av brandskyddsobjekt.
+Analysera objektet och prediktera när nästa brist sannolikt uppstår.
+
+Svara i JSON:
+{
+    "predicted_failure_months": &lt;antal månader&gt;,
+    "confidence": &lt;0.0-1.0&gt;,
+    "reasoning": "&lt;kort analys&gt;"
+}
+
+HITL-policy: prediktioner är beslutsunderlag — åtgärdsplan kräver
+godkännande av ansvarig.
+        </field>
+        <field name="status">active</field>
+        <field name="init_type" eval="'manual'"/>
+        <field name="model_ids" eval="[(6, 0, [
+            ref('fire_protection_sba.model_fire_protection_inspection'),
+        ])]"/>
+        <field name="filter_domain">[]</field>
+        <field name="injection_level">summary_and_key</field>
+        <field name="hitl_threshold">always</field>
+        <field name="budget_kr_monthly">0</field>
+        <field name="max_actions_per_day">20</field>
+        <field name="orchestration_mode">single</field>
+        <field name="example_prompts">
+- "När förväntas nästa brist på objektet?"
+- "Prediktera underhållsbehov för brandvarnare"
+        </field>
+    </record>
+</odoo>

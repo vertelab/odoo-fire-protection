@@ -6,10 +6,10 @@
     'version': '18.0.1.0.0',
     'summary': 'AI-driven riskanalys och prediktivt underhåll för brandskydd',
     'category': 'Fire Protection',
-    'depends': ['fire_protection_sba', 'ai_agent'],
+    'depends': ['fire_protection_sba', 'ai_agent_core'],
     'data': [
         'security/ir.model.access.csv',
-        'data/ai_agent_data.xml',
+        'data/ai_coworker_data.xml',
         'data/cron.xml',
     ],
     'application': False,

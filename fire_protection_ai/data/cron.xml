@@ -4,8 +4,7 @@
         <field name="name">Fire Protection: AI Risk Assessment (Nightly)</field>
         <field name="interval_number">1</field>
         <field name="interval_type">days</field>
-        <field name="numbercall">-1</field>
-        <field name="active" eval="False"/>
+                <field name="active" eval="False"/>
         <field name="model_id" ref="fire_protection_sba.model_fire_protection_inspection"/>
         <field name="code">model.cron_ai_risk_assessment()</field>
     </record>

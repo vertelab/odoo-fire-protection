@@ -76,7 +76,7 @@
                 <field name="unique_id"/>
                 <field name="qr_code"/>
                 <templates>
-                    <t t-name="kanban-box">
+                    <t t-name="card">
                         <div class="oe_kanban_card oe_kanban_global_click"
                              t-att-class="'oe_kanban_card oe_kanban_global_click ' + (record.status.raw_value == 'critical' ? 'oe_kanban_card_red' : record.status.raw_value == 'deficient' ? 'oe_kanban_card_yellow' : '')">
                             <div class="o_kanban_image">

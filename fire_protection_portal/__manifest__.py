@@ -4,6 +4,7 @@
 {
     'name': 'Fire Protection Portal — Kundportal för SBA',
     'version': '18.0.1.0.0',
+    'license': 'AGPL-3',
     'summary': 'White label kundportal för brandskydd — kunder ser sina fastigheter, ritningar och status',
     'category': 'Fire Protection',
     'depends': ['fire_protection_base', 'fire_protection_floorplan', 'portal'],

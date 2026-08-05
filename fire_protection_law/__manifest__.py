@@ -4,6 +4,7 @@
 {
     'name': 'Fire Protection Law — Brandskyddslagstiftning',
     'version': '18.0.1.0.0',
+    'license': 'AGPL-3',
     'summary': 'Förladdad brandskyddslagstiftning via mgmtsystem_law — LSO, LBE, AFS, BBR, SBF',
     'category': 'Fire Protection',
     'depends': ['fire_protection_base', 'mgmtsystem_law', 'document_law'],

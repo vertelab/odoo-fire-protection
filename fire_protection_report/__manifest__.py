@@ -4,6 +4,7 @@
 {
     'name': 'Fire Protection Report — Tillsynsredo',
     'version': '18.0.1.0.0',
+    'license': 'AGPL-3',
     'summary': 'Exportera kompletta tillsynsunderlag för Räddningstjänsten',
     'category': 'Fire Protection',
     'depends': ['fire_protection_sba', 'mgmtsystem_nonconformity'],

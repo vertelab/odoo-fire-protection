@@ -4,6 +4,7 @@
 {
     'name': 'Fire Protection SBA — Systematiskt Brandskyddsarbete',
     'version': '18.0.1.0.0',
+    'license': 'AGPL-3',
     'summary': 'Ronderingsmallar, checklistor, egenkontroll för brandskydd',
     'category': 'Fire Protection',
     'depends': ['fire_protection_base', 'fire_protection_floorplan'],

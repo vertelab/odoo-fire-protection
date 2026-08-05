@@ -4,6 +4,7 @@
 {
     'name': 'Fire Protection IoT — Sensorbrygga',
     'version': '18.0.1.0.0',
+    'license': 'AGPL-3',
     'summary': 'IoT-integration för brandlarmspaneler och sensorer',
     'category': 'Fire Protection',
     'depends': ['fire_protection_base'],

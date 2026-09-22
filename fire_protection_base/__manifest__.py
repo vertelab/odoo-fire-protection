@@ -19,7 +19,7 @@
         Bygger på OCA fieldservice och Odoo maintenance.
     """,
     'author': 'Vertel AB',
-    'website': 'https://vertel.se',
+    'website': 'https://vertel.se/apps/odoo-fire-protection/fire_protection_base',
     'license': 'AGPL-3',
     'depends': [
         'base',

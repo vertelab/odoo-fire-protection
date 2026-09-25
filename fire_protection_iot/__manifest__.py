@@ -6,7 +6,17 @@
     'name': 'Fire Protection IoT — Sensorbrygga',
     'version': '18.0.1.0.0',
     'license': 'AGPL-3',
-    'summary': 'IoT-integration för brandlarmspaneler och sensorer',
+    'summary': "Connects IoT sensors to fire protection monitoring.",
+    'description': '''
+Fire Protection IoT — Sensorbrygga
+==================================
+
+    Connects IoT sensors to fire protection monitoring.
+
+    Features:
+
+        - UI Integration: Extends 1 view(s) in the Odoo interface.
+    ''',
     'category': 'Fire Protection',
     'depends': ['fire_protection_base'],
     'data': [

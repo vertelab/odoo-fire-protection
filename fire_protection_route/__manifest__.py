@@ -6,7 +6,18 @@
     'name': 'Fire Protection Route — Ruttoptimering för brandtekniker',
     'version': '18.0.1.0.0',
     'license': 'AGPL-3',
-    'summary': 'Optimerad ruttplanering för brandtekniker baserat på geografisk position och SLA',
+    'summary': "Adds evacuation routes to fire protection plans.",
+    'description': '''
+Fire Protection Route — Ruttoptimering för brandtekniker
+========================================================
+
+    Adds evacuation routes to fire protection plans.
+
+    Features:
+
+        - UI Integration: Extends 2 view(s) in the Odoo interface.
+        - Extends Odoo: Builds on fsm.order.
+    ''',
     'category': 'Fire Protection',
     'depends': ['fire_protection_base', 'fieldservice', 'web_map_ce'],
     'data': [

@@ -6,7 +6,17 @@
     'name': 'Fire Protection Portal — Kundportal för SBA',
     'version': '18.0.1.0.0',
     'license': 'AGPL-3',
-    'summary': 'White label kundportal för brandskydd — kunder ser sina fastigheter, ritningar och status',
+    'summary': "Customer portal for fire protection documentation (SBA).",
+    'description': '''
+Fire Protection Portal — Kundportal för SBA
+===========================================
+
+    Customer portal for fire protection documentation (SBA).
+
+    Features:
+
+        - UI Integration: Extends 1 view(s) in the Odoo interface.
+    ''',
     'category': 'Fire Protection',
     'depends': ['fire_protection_base', 'fire_protection_floorplan', 'portal'],
     'data': [

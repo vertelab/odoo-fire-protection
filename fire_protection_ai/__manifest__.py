@@ -6,7 +6,17 @@
     'name': 'Fire Protection AI — Risk Analysis',
     'version': '18.0.1.0.0',
     'license': 'AGPL-3',
-    'summary': 'AI-driven riskanalys och prediktivt underhåll för brandskydd',
+    'summary': "Adds AI-assisted risk analysis for fire protection.",
+    'description': '''
+Fire Protection AI — Risk Analysis
+==================================
+
+    Adds AI-assisted risk analysis for fire protection.
+
+    Features:
+
+        - Automation: Scheduled jobs: Fire Protection: AI Risk Assessment (Nightly).
+    ''',
     'category': 'Fire Protection',
     'depends': ['fire_protection_sba', 'ai_agent_core'],
     'data': [

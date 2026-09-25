@@ -4,20 +4,20 @@
 {
     'name': 'Fire Protection Base',
     'version': '18.0.1.0.0',
-    'summary': 'Brandskydd — objektregister, livscykel, QR-koder',
+    'summary': 'Brandskydd — objektregister, livscykel, QR-koder.',
     'category': 'Fire Protection',
-    'description': """
-        Kärnmodul för brandskyddshantering i Odoo.
+    'description': '''
+Fire Protection Base
+====================
 
-        Implementerar:
-        - Brandskyddsobjekt (brandsläckare, brandlarm, branddörrar, etc.)
-        - Livscykelhantering med serviceintervall (5-årsöversyn, 10-årsomlastning)
-        - QR-koder för varje objekt
-        - Utökning av fsm.location med brandskyddsfält
-        - Koppling till OCA Field Service och Odoo Maintenance
+    Core module for fire protection management in Odoo.
 
-        Bygger på OCA fieldservice och Odoo maintenance.
-    """,
+Implements:
+
+    - Fire protection objects (extinguishers, alarms, fire doors, etc.)
+    - Life cycle management with service intervals (5-year review, etc.)
+    - Inspection and service history.
+    ''',
     'author': 'Vertel AB',
     'website': 'https://vertel.se/apps/odoo-fire-protection/fire_protection_base',
     'license': 'AGPL-3',

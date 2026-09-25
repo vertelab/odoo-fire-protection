@@ -7,6 +7,16 @@
     'version': '18.0.1.0.0',
     'license': 'AGPL-3',
     'summary': 'Förladdade brandtekniker-kompetenser i hr_skills — SBF, HLR, Heta Arbeten',
+    'description': '''
+Fire Protection Competence — Brandtekniker-certifieringar
+=========================================================
+
+    Förladdade brandtekniker-kompetenser i hr_skills — SBF, HLR, Heta Arbeten.
+
+    Features:
+
+        - Demo Data: Ships pre-configured demo data for the industry.
+    ''',
     'category': 'Fire Protection',
     'depends': ['fire_protection_base', 'mgmtsystem_hr_skills'],
     'data': [

@@ -1,25 +1,25 @@
-# Copyright (C) 2025 Vertel AB (<https://vertel.se>).
+# Copyright (C) 2025 Vertel Sverige AB (<https://vertel.se>).
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
     'name': 'Fire Protection Base',
     'version': '18.0.1.0.0',
-    'summary': 'Brandskydd — objektregister, livscykel, QR-koder.',
+    'summary': 'Brandskydd — objektregister, livscykel, QR-koder',
     'category': 'Fire Protection',
-    'description': '''
-Fire Protection Base
-====================
+    'description': """
+        Kärnmodul för brandskyddshantering i Odoo.
 
-    Core module for fire protection management in Odoo.
+        Implementerar:
+        - Brandskyddsobjekt (brandsläckare, brandlarm, branddörrar, etc.)
+        - Livscykelhantering med serviceintervall (5-årsöversyn, 10-årsomlastning)
+        - QR-koder för varje objekt
+        - Utökning av fsm.location med brandskyddsfält
+        - Koppling till OCA Field Service och Odoo Maintenance
 
-Implements:
-
-    - Fire protection objects (extinguishers, alarms, fire doors, etc.)
-    - Life cycle management with service intervals (5-year review, etc.)
-    - Inspection and service history.
-    ''',
-    'author': 'Vertel AB',
-    'website': 'https://vertel.se/apps/odoo-fire-protection/fire_protection_base',
+        Bygger på OCA fieldservice och Odoo maintenance.
+    """,
+    'author': 'Vertel Sverige AB',
+    'website': 'https://vertel.se',
     'license': 'AGPL-3',
     'depends': [
         'base',

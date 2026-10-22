@@ -50,7 +50,7 @@ class FireProtectionObject(models.Model):
         default="extinguisher",
     )
     location_id = fields.Many2one(
-        "fsm.location",
+        "res.partner",
         string="Location",
         required=True,
         index=True,

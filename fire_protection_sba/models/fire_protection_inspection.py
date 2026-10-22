@@ -18,7 +18,7 @@ class FireProtectionInspection(models.Model):
         default=lambda self: self.env.user,
     )
     location_id = fields.Many2one(
-        "fsm.location",
+        "res.partner",
         string="Location",
         required=True,
     )

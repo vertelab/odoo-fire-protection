@@ -13,7 +13,7 @@
         - Brandskyddsobjekt (brandsläckare, brandlarm, branddörrar, etc.)
         - Livscykelhantering med serviceintervall (5-årsöversyn, 10-årsomlastning)
         - QR-koder för varje objekt
-        - Utökning av fsm.location med brandskyddsfält
+        - Utökning av res.partner med brandskyddsfält
         - Koppling till OCA Field Service och Odoo Maintenance
 
         Bygger på OCA fieldservice och Odoo maintenance.
@@ -24,7 +24,7 @@
     'depends': [
         'base',
         'mail',
-        'fieldservice',
+        'contacts',
         'maintenance',
         'product',
     ],

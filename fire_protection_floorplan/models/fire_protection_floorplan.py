@@ -17,7 +17,7 @@ class FireProtectionFloorplan(models.Model):
     )
     image_filename = fields.Char()
     location_id = fields.Many2one(
-        "fsm.location",
+        "res.partner",
         string="Location",
         required=True,
         index=True,

@@ -16,13 +16,18 @@ Fire Protection Route — Ruttoptimering för brandtekniker
     Features:
 
         - UI Integration: Extends 2 view(s) in the Odoo interface.
-        - Extends Odoo: Builds on fsm.order.
+        - Extends Odoo: Builds on fieldservice.order.
     ''',
     'category': 'Fire Protection',
-    'depends': ['fire_protection_base', 'fieldservice', 'web_map_ce'],
+    'depends': [
+        'fire_protection_base',
+        # Routing is generic: the sequence, the ETA and the map view apply to
+        # any field service. fieldservice_route owns it; this module only
+        # keeps the menu entry.
+        'fieldservice_route',
+    ],
     'data': [
         'security/ir.model.access.csv',
-        'views/fire_protection_route_views.xml',
         'views/fire_protection_menu.xml',
     ],
     'assets': {

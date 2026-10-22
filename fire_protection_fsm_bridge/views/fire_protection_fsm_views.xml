@@ -15,9 +15,9 @@
         </field>
     </record>
     <record id="view_fsm_order_form_inherit_fire" model="ir.ui.view">
-        <field name="name">fsm.order.form.fire</field>
-        <field name="model">fsm.order</field>
-        <field name="inherit_id" ref="fieldservice.fsm_order_form_view"/>
+        <field name="name">fieldservice.order.form.fire</field>
+        <field name="model">fieldservice.order</field>
+        <field name="inherit_id" ref="fieldservice_vrtl.view_fieldservice_order_form"/>
         <field name="arch" type="xml">
             <xpath expr="//sheet" position="inside">
                 <group string="Brandskydd">

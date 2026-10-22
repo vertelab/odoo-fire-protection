@@ -16,10 +16,10 @@ Fire Protection — FSM Bridge
     Features:
 
         - UI Integration: Extends 1 view(s) in the Odoo interface.
-        - Extends Odoo: Builds on fsm.order, mgmtsystem.nonconformity.
+        - Extends Odoo: Builds on fieldservice.order, mgmtsystem.nonconformity.
     ''',
     'category': 'Fire Protection',
-    'depends': ['fire_protection_sba', 'mgmtsystem_nonconformity', 'fieldservice'],
+    'depends': ['fire_protection_sba', 'mgmtsystem_nonconformity', 'fieldservice_vrtl'],
     'data': [
         'security/ir.model.access.csv',
         'views/fire_protection_fsm_views.xml',

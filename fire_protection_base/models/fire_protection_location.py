@@ -5,7 +5,7 @@ from odoo import fields, models
 
 
 class FsmLocation(models.Model):
-    _inherit = "fsm.location"
+    _inherit = "res.partner"
 
     fire_safety_rating = fields.Selection(
         [
@@ -26,11 +26,6 @@ class FsmLocation(models.Model):
     fire_object_count = fields.Integer(
         string="Object Count",
         compute="_compute_fire_object_count",
-    )
-    floorplan_ids = fields.One2many(
-        "fire.protection.floorplan",
-        "location_id",
-        string="Floor Plans",
     )
     fire_last_inspection_date = fields.Date(string="Last Inspection")
     fire_next_inspection_date = fields.Date(string="Next Inspection Due")

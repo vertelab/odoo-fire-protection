@@ -3,7 +3,7 @@
     <record id="view_mgmtsystem_nonconformity_form_inherit_fire" model="ir.ui.view">
         <field name="name">mgmtsystem.nonconformity.form.fire</field>
         <field name="model">mgmtsystem.nonconformity</field>
-        <field name="inherit_id" ref="mgmtsystem_nonconformity.mgmtsystem_nonconformity_form_view"/>
+        <field name="inherit_id" ref="mgmtsystem_nonconformity.view_mgmtsystem_nonconformity_form"/>
         <field name="arch" type="xml">
             <xpath expr="//sheet" position="inside">
                 <group string="Brandskydd">
